@@ -4,6 +4,15 @@ qrserver
  
 A simple tool to serve a file to a smartphone using a QR code. 
  
+Installation
+------------
+
+.. code-block:: bash
+    
+    Install netiface, qrcode, bottle:
+    sudo apt-get install python-netifaces python-qrcode python-bottle
+    Then simply download qrserver.py
+
 Usage 
 ----- 
 
