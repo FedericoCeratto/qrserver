@@ -37,7 +37,7 @@ def serve_static(requested_filename):
     if requested_filename != served_filename:
         bottle.abort(401, "Sorry, access denied.")
 
-    return bottle.static_file(requested_filename, root='.')
+    return bottle.static_file(requested_filename, root='.', download=True)
 
 
 def main():
