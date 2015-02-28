@@ -23,6 +23,9 @@ Usage
     
     Serve a file:
     ./qrserver.py README.rst   
+    
+    Serve an URL (generate a QR code link)
+    ./qrserver.py http://firelet.net
 
 
 Screenshot 
