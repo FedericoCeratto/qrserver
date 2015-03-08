@@ -44,10 +44,14 @@ def main():
     global served_filename
 
     ap = ArgumentParser()
-    ap.add_argument('filename')
+    ap.add_argument('filename', help="Filename or URL")
     ap.add_argument('--ipaddr', default=guess_server_ipaddr())
     ap.add_argument('--port', default=8080, type=int)
     args = ap.parse_args()
+
+    if args.filename.startswith(('http://', 'https://')):
+        print_qrcode(args.filename)
+        return
 
     url = "http://%s:%d/%s" % (args.ipaddr, args.port, args.filename)
     print "\nURL: %s" % url
